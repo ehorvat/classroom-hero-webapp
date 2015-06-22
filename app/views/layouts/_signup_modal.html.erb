@@ -1,0 +1,146 @@
+<!-- Start Pricing Section -->
+        <div class="section-modal modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Sign Up</h3>
+                            <p>It's free to start</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                <form accept-charset="UTF-8" method="POST" action="/users" id="signup-form">
+          <div style="width: 370px; margin: 0 auto;">         
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+      
+          <input type="text" name="user[fname]" id="first_name"
+                class="center input form-control fields" placeholder="First Name"
+                style="max-width: 400px;"><br>
+                <input type="text" name="user[lname]" id="last_name"
+                class="center input form-control fields" placeholder="Last Name"
+                style="max-width: 400px;"><br>
+          <input type="text" name="user[email]" id="user_email"
+          class="center input form-control fields" placeholder="Email"
+          style="max-width: 400px;"><br>
+          <!--input type="password" name="user[password]" id="password"
+          class="center input form-control fields" placeholder="Password"
+          style="max-width: 400px;"><br>
+          <input type="password" name="user[password_confirmation]" id="password_confirmation"
+          class="center input form-control fields" placeholder="Confirm Password"
+          style="max-width: 400px;"><br-->
+          <label for="user_type_radios" style="text-align: center; display: block;">I am a:</label>
+          <div id="user_type_radios" class="center">
+                   <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary blue"><input type="radio" name="user[role]" id="student_type"
+            class="center inputtype-switch-r blue" value="student" > Student
+          </label>
+          <label class="btn btn-primary green">
+          <input type="radio" name="user[role]" id="teacher_type"
+            class="center input type-switch-r" value="teacher"> Teacher
+          </label>
+          <label class="btn btn-primary light-red">
+          <input type="radio" name="user[role]" id="_type"
+            class="center input type-switch-r" value="admin"> Administrator
+          </label>
+          </div>
+
+
+
+
+          
+
+          </div>
+        </div>
+              <div class="row" style="max-width: 900px; margin: 100px auto 0;">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pricing-table">
+                                    <div class="plan-name blue">
+                                        <h3>Recruit</h3>
+                                    </div>
+                                    <div class="plan-price">
+                                        <div class="price-value">$0<span>.00</span></div>
+                                        <div class="interval">per month for 2 months</div>
+                                    </div>
+                                    <div class="plan-list">
+                                        <ul>
+                                            <li>Classroom Hero Toolkit</li>
+                                            <li>2 Classrooms</li>
+                                            <li>Basic Reward System Features</li>
+                                            <li>20 replacement stamps</li>
+                                            <li>-</li>
+                                            <li>-</li>
+                                        </ul>
+                                    </div>
+                                    
+                                        <button type="submit" class="btn btn-primary plan-signup blue">Sign Up</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pricing-table ">
+                                    <div class="plan-name color">
+                                        <h3>Heroic</h3>
+                                    </div>
+                                    <div class="plan-price">
+                                        <div class="price-value">$200<span>.00</span></div>
+                                        <div class="interval"> per year</div>
+                                    </div>
+                                    <div class="plan-list">
+                                        <ul>
+                                            <li>Classroom Hero Toolkit</li>
+                                            <li>1 Classroom</li>
+                                            <li>Basic Reward System Features</li>
+                                            <li>Classroom Statistics</li>
+                                            <li>Unlimited replacement stamps</li>
+                                            <li>-</li>
+                                        </ul>
+                                    </div>
+                                        <button type="submit" class="btn btn-primary plan-signup color">Sign Up</button>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 ">
+                                <div class="pricing-table">
+                                    <div class="plan-name light-red">
+                                        <h3>Legendary</h3>
+                                    </div>
+                                    <div class="plan-price">
+                                        <div class="price-value">$150<span>.00</span></div>
+                                        <div class="interval">per classroom per year</div>
+                                    </div>
+                                    <div class="plan-list">
+                                        <ul>
+                                            <li>Classroom Hero Toolkit</li>
+                                            <li>All Classrooms</li>
+                                            <li>Basic Reward System Features</li>
+                                            <li>Classroom Statistics</li>
+                                            <li>Instant Messaging</li>
+                                            <li>Unlimited Replacement stamps</li>
+                                        </ul>
+                                    </div>
+                                    
+                                        <button type="submit" class="btn btn-primary plan-signup">Sign Up</button>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+
+    </div>
+
+      </form>
+                        
+                    </div><!-- /.row -->
+                </div>
+                
+            </div>
+        </div>

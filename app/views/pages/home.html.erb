@@ -1,0 +1,145 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "animate" %>
+    <%= stylesheet_link_tag "home" %>
+    <head>
+        <title><%= yield(:title) %> | Classroom Hero</title>
+
+
+    </head>
+    <body>
+
+            <%= render "layouts/pricing_modal" %>
+            <%= render "layouts/signup_modal" %>     
+
+
+       <!-- Start Logo Section -->
+        <section id="logo-section" class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo text-center">
+                            <img src="logo.png" class="img-responsive" alt="" style="width: 100px; height: 100px; display: inline;"/>
+                            <h1>Classroom Hero</h1>
+                            <h3 style="color:white;">The most advanced token economy.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Logo Section -->
+        
+        
+        <!-- Start Main Body Section -->
+        <div class="mainbody-section text-center">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-3">
+                        
+                        <div class="menu-item blue">
+                            <a href="#feature-modal" data-toggle="modal">
+                                <i class="fa fa-magic"></i>
+                                <p>Features</p>
+                            </a>
+                        </div>
+                        
+                        <div class="menu-item green">
+                            <a href="#pricing-modal" data-toggle="modal">
+                                <i class="fa fa-file-photo-o"></i>
+                                <p>Pricing</p>
+                            </a>
+                        </div>
+                        
+                        <div class="menu-item light-red">
+                            <a href="#about-modal" data-toggle="modal">
+                                <i class="fa fa-user"></i>
+                                <p>Need Help?</p>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-md-6">
+                        
+                        <!-- Start Carousel Section -->
+                        <div class="home-slider">
+                            <div id="carousel-example-generic" class="carousel slide"  style="padding-bottom: 70px;">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <iframe src="https://www.youtube.com/v/RX2e2b4o6fk" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="3" height="300" width="480"></iframe>
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <iframe src="https://www.youtube.com/v/bJ4EFh7oWJc" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="3" height="300" width="480"></iframe>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Start Carousel Section -->
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="menu-item color responsive">
+                                    <a href="#signup-modal" data-toggle="modal">
+                                        <i class="fa fa-area-chart"></i>
+                                        <p>Sign Up</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="menu-item light-orange responsive-2">
+                                    <a href="#team-modal" data-toggle="modal">
+                                        <i class="fa fa-users"></i>
+                                        <p>Sign In</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-md-3">
+                        
+                        <div class="menu-item light-red">
+                            <a href="#contact-modal" data-toggle="modal">
+                                <i class="fa fa-envelope-o"></i>
+                                <p>Contact</p>
+                            </a>
+                        </div>
+                        
+                        <div class="menu-item color">
+                            <a href="#testimonial-modal" data-toggle="modal">
+                                <i class="fa fa-comment-o"></i>
+                                <p>About Us</p>
+                            </a>
+                        </div>
+                        
+                        <div class="menu-item blue">
+                            <a href="#news-modal" data-toggle="modal">
+                                <i class="fa fa-mortar-board"></i>
+                                <p>Testimonial</p>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Body Section -->
+
+    </body>
+</html>
