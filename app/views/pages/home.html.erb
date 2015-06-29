@@ -9,10 +9,9 @@
 
 
     </head>
-    <body>
-
+    <body id="home-body">
+        <div id="home-container">
             <%= render "layouts/pricing_modal" %>
-            <%= render "layouts/signup_modal" %>     
 
 
        <!-- Start Logo Section -->
@@ -92,7 +91,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="menu-item color responsive">
-                                    <a href="#signup-modal" data-toggle="modal">
+                                    <a href="users/new" data-toggle="modal">
                                         <i class="fa fa-area-chart"></i>
                                         <p>Sign Up</p>
                                     </a>
@@ -101,7 +100,7 @@
                             
                             <div class="col-md-6">
                                 <div class="menu-item light-orange responsive-2">
-                                    <a href="#team-modal" data-toggle="modal">
+                                    <a href="/login" data-toggle="modal">
                                         <i class="fa fa-users"></i>
                                         <p>Sign In</p>
                                     </a>
@@ -140,6 +139,6 @@
             </div>
         </div>
         <!-- End Main Body Section -->
-
+</div>
     </body>
 </html>

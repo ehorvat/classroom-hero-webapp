@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total_coin: 1
+  current_coins: 1
+  lvl: 1
+  progress: 1
+  lvl_up_amount: 1
+
+two:
+  total_coin: 1
+  current_coins: 1
+  lvl: 1
+  progress: 1
+  lvl_up_amount: 1

@@ -1,0 +1,20 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "animate" %>
+    <%= stylesheet_link_tag "home" %>
+    <head>
+        <title><%= yield(:title) %> | Classroom Hero</title>
+
+
+    </head>
+    <body>
+<div id="signin-container">
+
+<%= render 'layouts/signin_form' %>
+
+
+</div>
+</body>
+</html>

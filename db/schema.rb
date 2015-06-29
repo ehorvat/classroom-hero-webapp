@@ -11,17 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150620234634) do
+ActiveRecord::Schema.define(version: 20150629040637) do
+
+  create_table "students", force: true do |t|
+    t.integer  "total_coin",    limit: 4
+    t.integer  "current_coins", limit: 4
+    t.integer  "lvl",           limit: 4
+    t.integer  "progress",      limit: 4
+    t.integer  "lvl_up_amount", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "teachers", force: true do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "user_id",    limit: 4
+  end
 
   create_table "users", force: true do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "fname",      limit: 255
-    t.string   "lname",      limit: 255
-    t.string   "role",       limit: 255
-    t.string   "stamp",      limit: 255
-    t.boolean  "activated",  limit: 1
-    t.string   "email",      limit: 255
+    t.string   "fname",           limit: 255
+    t.string   "lname",           limit: 255
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
+    t.string   "salt",            limit: 255
+    t.string   "stamp",           limit: 255
+    t.boolean  "activated",       limit: 1
+    t.string   "package",         limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "role",            limit: 255
   end
 
 end

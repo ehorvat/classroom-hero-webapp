@@ -3,11 +3,15 @@
 
 
 body {
-    background-image: url(image-path('paper.jpg'));
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+#home-body {
+        background-image: url(image-path('paper.jpg'));
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 50%;
-    font-family: 'Open Sans', sans-serif;
 }
 
 a,
@@ -42,6 +46,15 @@ p {
     line-height: 21px;
 }
 
+#signin-container h1 {
+    margin: 0 auto;
+}
+
+#signin-container form input {
+    margin: 0 auto;
+    display: block;
+}
+
 #btn-signup {
     width: 190px;
     margin: 0 auto;
@@ -49,6 +62,17 @@ p {
 }
 
 
+#signup-form .btn-group label {
+    max-width: 200px;
+    display: block;
+}
+
+#signup-form button {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+margin-top: 20px;
+}
 
 .btn-primary {
     width: 210px;
@@ -72,7 +96,6 @@ p {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    color: #fff;
     border-color: #ea321e;
     background-color: none !important;
 }
@@ -126,6 +149,9 @@ fieldset[disabled] .btn-primary.active {
     font-family: 'Arial Rounded MT Bold';
     color: #fff;
     font-size: 60px;
+    margin: 0 auto;
+display: block;
+width: 440px;
 }
 
 .logo span {

@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+	<% if notice %>
+		<div class="alert alert-success center ch-alert" id="notice" role="alert" style="max-width: 600px">
+			<%= notice %></div>
+	<% end %>
+	<% if current_user.role == 'student' %>
+		<%= render 'student_lihome' %>
+	<% end %>
+	<% if current_user.role == 'teacher' %>
+		<%= render 'teacher_lihome' %>
+	<% end %> 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

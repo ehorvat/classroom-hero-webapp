@@ -7,6 +7,8 @@ Rails.application.config.assets.precompile += %w( animate.css )
 
 Rails.application.config.assets.precompile += %w( home.css )
 
+Rails.application.config.assets.precompile += %w( teacher_main.css )
+
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

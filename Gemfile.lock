@@ -40,6 +40,7 @@ GEM
     autoprefixer-rails (5.2.0.1)
       execjs
       json
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-modal-rails (2.2.5)
@@ -159,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   arel (= 6.0.0.beta2)
+  bcrypt (~> 3.1.7)
   bootstrap-modal-rails
   bootstrap-sass
   bootstrap-select-rails

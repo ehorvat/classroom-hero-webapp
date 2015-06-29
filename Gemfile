@@ -40,7 +40,7 @@ gem 'sprockets', '2.11.0' # 2.12.0 is broken
 gem 'sprockets-rails'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

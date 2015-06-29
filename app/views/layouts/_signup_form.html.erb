@@ -1,12 +1,4 @@
-<!-- Start Pricing Section -->
-        <div class="section-modal modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
+
                 
                 <div class="container">
                     <div class="row">
@@ -18,6 +10,10 @@
                     <div class="row">
                         
                 <form accept-charset="UTF-8" method="POST" action="/users" id="signup-form">
+                      <% if @user.errors.any? %>
+      <div class="center alert alert-danger ch-alert" role="alert">
+        Whoops! <%= @user.errors.full_messages %></div>
+    <% end %>
           <div style="width: 370px; margin: 0 auto;">         
         <input name="utf8" type="hidden" value="&#x2713;" />
         <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
@@ -31,36 +27,23 @@
           <input type="text" name="user[email]" id="user_email"
           class="center input form-control fields" placeholder="Email"
           style="max-width: 400px;"><br>
-          <!--input type="password" name="user[password]" id="password"
+          <input type="password" name="user[password]" id="password"
           class="center input form-control fields" placeholder="Password"
           style="max-width: 400px;"><br>
           <input type="password" name="user[password_confirmation]" id="password_confirmation"
           class="center input form-control fields" placeholder="Confirm Password"
-          style="max-width: 400px;"><br-->
+          style="max-width: 400px;"><br>
           <label for="user_type_radios" style="text-align: center; display: block;">I am a:</label>
           <div id="user_type_radios" class="center">
-                   <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary blue"><input type="radio" name="user[role]" id="student_type"
-            class="center inputtype-switch-r blue" value="student" > Student
-          </label>
-          <label class="btn btn-primary green">
+         
+          <label class="btn color" style="display:none;">
           <input type="radio" name="user[role]" id="teacher_type"
-            class="center input type-switch-r" value="teacher"> Teacher
+            class="center input type-switch-r" value="teacher" checked> Teacher
           </label>
-          <label class="btn btn-primary light-red">
-          <input type="radio" name="user[role]" id="_type"
-            class="center input type-switch-r" value="admin"> Administrator
-          </label>
-          </div>
-
-
-
-
-          
-
+      
           </div>
         </div>
-              <div class="row" style="max-width: 900px; margin: 100px auto 0;">
+              <!--div class="row" style="max-width: 900px; margin: 100px auto 0;">
                             <div class="col-md-4 col-sm-6">
                                 <div class="pricing-table">
                                     <div class="plan-name blue">
@@ -132,15 +115,12 @@
                                    
                                 </div>
                             </div>
-                        </div>
+                        </div-->
 
+<button type="submit" class="btn btn-primary">Sign Up</button>
 
     </div>
-
       </form>
                         
                     </div><!-- /.row -->
                 </div>
-                
-            </div>
-        </div>
