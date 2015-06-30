@@ -1,0 +1,39 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div id="signin-field-container" style="width: 370px; margin: 0 auto;">         
+  <div class="field">
+    <%= f.text_field :fname, autofocus: true, :placeholder => 'First Name', class: 'input form-control fields' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :lname, :placeholder => 'Last Name', class: 'input form-control fields' %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, :placeholder => 'Email', class: 'input form-control fields' %>
+  </div>
+
+  <div class="field">
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", :placeholder => 'Password', class: 'input form-control fields' %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'Confirm Password', class: 'input form-control fields' %>
+  </div>
+
+  <label class="btn color" style="display:none;">
+   <input type="radio" name="user[role]" id="teacher_type" class="center input type-switch-r" value="teacher" checked="true"> Teacher
+  </label>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+</div>
+<% end %>
+
+<%= render "devise/shared/links" %>
