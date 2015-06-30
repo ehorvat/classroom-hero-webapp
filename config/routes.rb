@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+  devise_for :users
+
+  get 'dashboard' => 'users#show', :as => 'user_root'
+
+
   get 'help' => 'pages#help'
   get 'about' => 'pages#about'
   get 'privacypolicy' => 'pages#privacypolicy'
   get 'termsofuse' => 'pages#termsofuse'
   get 'pricing'=> 'pages#pricing'
-
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
-
-  resources :users
 
   resources :teacher
 
