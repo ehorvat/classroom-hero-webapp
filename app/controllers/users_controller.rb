@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
+  before_action only: [:show, :edit, :update, :destroy]
   # GET /users
   # GET /users.json
   def index
@@ -10,23 +11,12 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    if not is_logged_in
-      flash[:error] = "You are not logged in! Please log in to access this page."
-      redirect_to login_path
-    end
-    if @user.nil?
-      @user = User.find(params[:id])
-    end
-    if current_user.id == @user.id
-      render 'show'
-    else
-      render "not_allowed"
-    end
+    @user = current_user
   end
 
   # GET /users/new
   def new
-    @user = User.new
+    @user = current_user
   end
 
   # GET /users/1/edit
@@ -78,14 +68,4 @@ class UsersController < ApplicationController
     end
   end
 
-   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:fname, :lname, :role, :email, :password, :password_confirmation)
-    end
 end
