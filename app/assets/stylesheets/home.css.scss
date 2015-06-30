@@ -31,6 +31,19 @@ li {
     list-style: none;
 }
 
+.row {
+   padding: 0 0 30px;
+   width: 100%;
+} 
+
+.content_row {
+   margin: 0 auto;
+   max-width: 100%;
+   padding: 0 20px;
+   width: 100%;
+   height: 600px;
+} 
+
 a {
     color: #FF432E;
     text-decoration: none;
